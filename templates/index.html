@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<div class="container">
+    {% include '_messages.html' %}
+        {% from "_formhelpers.html" import render_field %}
+        <form method="post" enctype="multipart/form-data">
+            <div>
+                {{ render_field(form.course_urll, class="form-control") }}
+                {{ render_field(form.tuloss, class="form-control") }}
+                {{ render_field(form.ratingg, class="form-control") }}
+            </div>
+        <p><input type=submit value=Calculate class="btn btn-info"></p>
+    </form>
+</div>
+
+{% endblock content %}
